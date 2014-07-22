@@ -68,8 +68,35 @@ class ProblemsTest extends FunSuite {
     val result = problem.p03(index, list)
 
     assert (result === 4)
-
   }
 
 
+  test("find the number of element in the list : l(2,6,9,4,1)") {
+    val problem = new Problems
+    val list = List(2, 6, 9, 4, 1)
+
+    val result = problem.p04(list)
+
+    assert (result === 5)
+  }
+
+
+  test("find the number of element in the  empty list : l()") {
+    val problem = new Problems
+    val list = List()
+
+    val result = problem.p04(list)
+
+    assert (result === 0)
+  }
+
+
+  test ("reverse the list : l(1,2,3,4)" ) {
+    val problem = new Problems
+    val list = List(1,2,3,4)
+
+    val result = problem.p05(list)
+
+    assert(result === List(4,3,2,1))
+  }
 }
