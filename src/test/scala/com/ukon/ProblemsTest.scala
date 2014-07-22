@@ -90,7 +90,6 @@ class ProblemsTest extends FunSuite {
     assert (result === 0)
   }
 
-
   test ("reverse the list : l(1,2,3,4)" ) {
     val problem = new Problems
     val list = List(1,2,3,4)
@@ -98,5 +97,19 @@ class ProblemsTest extends FunSuite {
     val result = problem.p05(list)
 
     assert(result === List(4,3,2,1))
+  }
+
+  test ("should be a palindrome list: l(1,2,3,2,1)") {
+    val problem = new Problems
+    val list = List(1,2,3,3,2,1)
+
+    assert(problem.p06(list))
+  }
+
+  test ("should not be a palindrome list: l(1,2,3,1)") {
+    val problem = new Problems
+    val list = List(1,2,3,3,1)
+
+    assert(! problem.p06(list))
   }
 }

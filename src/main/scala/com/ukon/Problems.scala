@@ -54,4 +54,19 @@ class Problems {
   def p05(list: List[Int]): List[Int] = {
     list.foldLeft(List[Int]()) { (l, r) => r :: l}
   }
+
+  /**
+   * find out where a list is palindrome
+   */
+
+  def p06(list: List[Int]) : Boolean = {
+//    SOLUTION 1
+//    val reverseList: List[Int] = p05(list)
+//    list == reverseList
+
+      if (list.size == 0 || list.size == 1) true
+      else if (list.head == list.last) {
+        p06(list.dropRight(1).drop(1))
+      } else false
+  }
 }
