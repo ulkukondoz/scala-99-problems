@@ -58,15 +58,27 @@ class Problems {
   /**
    * find out where a list is palindrome
    */
+  def p06(list: List[Int]): Boolean = {
+    //    SOLUTION 1
+    //    val reverseList: List[Int] = p05(list)
+    //    list == reverseList
 
-  def p06(list: List[Int]) : Boolean = {
-//    SOLUTION 1
-//    val reverseList: List[Int] = p05(list)
-//    list == reverseList
-
-      if (list.size == 0 || list.size == 1) true
-      else if (list.head == list.last) {
-        p06(list.dropRight(1).drop(1))
-      } else false
+    if (list.size == 0 || list.size == 1) true
+    else if (list.head == list.last) {
+      p06(list.dropRight(1).drop(1))
+    } else false
   }
+
+  /**
+   * flatten a nested list structure
+   */
+  def p07[A](list: List[A]): List[A] = ???
+
+
+  /**
+   * eliminate consecutive duplicates of list elements
+   */
+  def p08[A](list: List[A]): List[A] =
+      list.foldLeft(List[A]()){ (l, r) => r :: l.dropWhile( _ == r ) }
+
 }

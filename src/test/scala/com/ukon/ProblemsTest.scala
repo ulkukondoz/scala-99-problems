@@ -112,4 +112,24 @@ class ProblemsTest extends FunSuite {
 
     assert(! problem.p06(list))
   }
+
+  ignore("flatten a nested list structure") {
+    val problem = new Problems
+    val list = List(List(1, 1), 2, List(3, List(5, 8)))
+
+    val result = problem.p07(list)
+
+    assert(result === List(1,1,2,3,8))
+
+  }
+
+  test("eliminate consecutive duplicates of list elements") {
+    val problem = new Problems
+    val list = List(1,1,3,2,2,2,3,3,1)
+
+    val result = problem.p08(list)
+
+    assert(result === List(1,3,2,3,1))
+  }
+
 }
